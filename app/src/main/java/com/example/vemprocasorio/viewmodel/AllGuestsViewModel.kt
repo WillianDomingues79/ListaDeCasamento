@@ -1,4 +1,4 @@
-package com.example.vemprocasorio.ui
+package com.example.vemprocasorio.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

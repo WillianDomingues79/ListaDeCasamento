@@ -1,10 +1,12 @@
-package com.example.vemprocasorio
+package com.example.vemprocasorio.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
+import com.example.vemprocasorio.R
 import com.example.vemprocasorio.databinding.ActivityGuestFormBinding
+import com.example.vemprocasorio.viewmodel.GuestFormViewModel
 
 class GuestFormActivity : AppCompatActivity(), View.OnClickListener {
 

@@ -1,13 +1,13 @@
-package com.example.vemprocasorio.ui
+package com.example.vemprocasorio.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class PresentViewModel : ViewModel() {
+class AbsentViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is Present"
+        value = "This is Absent"
     }
     val text: LiveData<String> = _text
 }
