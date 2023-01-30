@@ -1,13 +1,13 @@
-package com.example.vemprocasorio.ui.home
+package com.example.vemprocasorio.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class HomeViewModel : ViewModel() {
+class PresentViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+        value = "This is Present"
     }
     val text: LiveData<String> = _text
 }
