@@ -16,37 +16,34 @@ class AllGuestsFragment : Fragment() {
 
     private val binding get() = _binding!!
 
-    //=======================  Inicia Criação da view  =========================
+    private lateinit var viewModel: AllGuestsViewModel
+
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val ViewModel =
-            ViewModelProvider(this).get(AllGuestsViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(AllGuestsViewModel::class.java)
 
         _binding = FragmentAllGuestsBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        //=======================  Termina Criação da view  =========================
 
-        //Instancia variaveis para serem observadas
-        val textView: TextView = binding.textHome
-        val textView2: TextView = binding.textHome2
+        viewModel.getAll()
 
+        observe()
 
-        //Observação
-        ViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-
-        ViewModel.text2.observe(viewLifecycleOwner) {
-            textView2.text = it
-        }
         return root
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun observe(){
+        viewModel.guests.observe(viewLifecycleOwner) {
+
+        }
     }
 }
